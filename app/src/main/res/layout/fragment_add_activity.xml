@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".fragment.AddActivityFragment">
+
+    <TextView
+        android:id="@+id/text_judul"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/input_aktivitas"
+        android:text="What you gonna do Maulana?"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="48sp"
+        android:autoSizeStepGranularity="6sp"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/input_aktivitas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_judul"
+        app:layout_constraintBottom_toTopOf="@id/btn_tambah"
+        android:gravity="top|start"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="30sp"
+        android:autoSizeStepGranularity="6sp"
+        android:autoSizeTextType="uniform"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_round_edittext"/>
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_aktivitas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="26sp"
+        android:autoSizeStepGranularity="6sp"
+        android:autoSizeTextType="uniform"
+        android:text="Tambah"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

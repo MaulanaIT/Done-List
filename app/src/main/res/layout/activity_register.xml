@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/input_username"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintTop_toTopOf="@id/layout"
+            app:layout_constraintBottom_toTopOf="@id/input_email"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="26sp"
+            android:autoSizeStepGranularity="6sp"
+            android:autoSizeTextType="uniform"
+            android:inputType="textEmailAddress"
+            android:maxLength="12"
+            android:textColor="@color/black"
+            android:hint="@string/username"
+            android:background="@drawable/bg_round_edittext"/>
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintTop_toBottomOf="@id/input_username"
+            app:layout_constraintBottom_toTopOf="@id/input_password"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="26sp"
+            android:autoSizeStepGranularity="6sp"
+            android:autoSizeTextType="uniform"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:textColor="@color/black"
+            android:hint="@string/email"
+            android:background="@drawable/bg_round_edittext"/>
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintTop_toBottomOf="@id/input_email"
+            app:layout_constraintBottom_toBottomOf="@id/layout"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="26sp"
+            android:autoSizeStepGranularity="6sp"
+            android:autoSizeTextType="uniform"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:hint="@string/password"
+            android:background="@drawable/bg_round_edittext"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="26sp"
+        android:autoSizeStepGranularity="6sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/daftar"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

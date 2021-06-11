@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".activity.LandingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintTop_toTopOf="@id/layout"
+            app:layout_constraintBottom_toTopOf="@id/btn_masuk"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeStepGranularity="6sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/daftar"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintTop_toBottomOf="@id/btn_daftar"
+            app:layout_constraintBottom_toBottomOf="@id/layout"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeStepGranularity="6sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/masuk"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
