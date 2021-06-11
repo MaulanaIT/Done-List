@@ -2,6 +2,7 @@ package com.virtusrox.donelist.fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -20,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.virtusrox.donelist.R;
+import com.virtusrox.donelist.activity.LandingActivity;
 import com.virtusrox.donelist.activity.MainActivity;
 import com.virtusrox.donelist.adapter.ActivityAdapter;
 import com.virtusrox.donelist.model.ActivityModel;
@@ -29,11 +31,13 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    ImageButton btnTambah;
+    ImageButton btnTambah,
+            btnKeluar;
 
     TextView textJudul;
 
     SharedPreferences savedData;
+    SharedPreferences.Editor editor;
 
     List<ActivityModel> listActivity;
 
@@ -63,7 +67,9 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         savedData = getActivity().getSharedPreferences("Saved Data", Context.MODE_PRIVATE);
+        editor = savedData.edit();
 
+        btnKeluar = view.findViewById(R.id.btn_keluar);
         btnTambah = view.findViewById(R.id.btn_tambah);
 
         textJudul = view.findViewById(R.id.text_judul);
@@ -85,6 +91,16 @@ public class HomeFragment extends Fragment {
         btnTambah.setOnClickListener(v -> {
             getParentFragmentManager().popBackStackImmediate("Fragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
             getParentFragmentManager().beginTransaction().replace(R.id.container, new AddActivityFragment()).addToBackStack("Fragment").commit();
+        });
+
+        btnKeluar.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), LandingActivity.class);
+            startActivity(intent);
+
+            editor.clear();
+            editor.apply();
+
+            getActivity().finish();
         });
     }
 }
